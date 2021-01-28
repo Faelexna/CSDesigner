@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Collaborative Sprite Designer</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script language="JavaScript" type="text/javascript" src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.6/qs.min.js"
+		integrity="sha512-3TmPrquYLaAsUmZKXRARTDC5siWhLAdBVqNo4dWpDABBtLU62AaoTaQJEvjxjExcZYurO6i1dnK85k8pPIBlRg=="
+		crossorigin="anonymous">
+	</script>
+	<script language="JavaScript" type="text/javascript"  src="js/main.js"></script>
+</head>
+<body>
+<h1>Collaborative Sprite Designer Discussion</h1>
+<div class="collection-chat-container">
+	<header class="collection-chat-header">
+		<h2 id="collection-chat-title"><!--Collection Name--></h2>
+	</header>
+	<main class="collection-chat-main">
+		<div class="collection-messages"></div>
+		<div class="collection-message-form">
+			<form id="message-form">
+				<input id="message" type="text" required autocomplete="off"/>
+				<input id="username" type="text" placeholder="Enter Username" required autocomplete="off"/>
+				<button class="btn">Send</button>
+			</form>
+		</div>
+
+	</main>
+</div>
+</body>
+</html>

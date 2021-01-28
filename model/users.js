@@ -6,8 +6,10 @@ let Users = mongoose.model('users', userSchema);
 
 //User enters the chat
 async function addUser(id, username) {
-	Users.insertOne(
-		{ _id: id, username: username }
+	Users.findOneAndUpdate(
+		{ _id : id},
+		{$set: { username : username } },
+		{ upsert : true }
 	);
 
 	let user = { id: id, username: username };

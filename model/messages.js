@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //Set up messages schema
-let messageSchema = new mongoose.Schema({ mUser: String, message: String});
+let messageSchema = new mongoose.Schema({ mUser: String, msg: String});
 let Messages = mongoose.model('messages', messageSchema);
 
 //Returns the last 30 messages in the collection
@@ -11,7 +11,7 @@ async function getMessageHistory() {
 
 async function insertNewMessage( user, message ) {
 	Messages.insertOne(
-		{ mUser: user, message: message }
+		{ mUser: user, msg: message }
 	);
 }
 
