@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - node
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: jack.faupel@students.plymouth.ac.uk
+  api_key: 0de685c5-1044-4b04-81d0-5d119c5d81a6
+on:
+    tags: true
+    repo: https://github.com/Faelexna/CSDesigner

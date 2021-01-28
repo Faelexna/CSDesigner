@@ -1,20 +1,47 @@
 {
-  "name": "CSDesigner",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Faelexna/CSDesigner.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Faelexna/CSDesigner/issues"
-  },
-  "homepage": "https://github.com/Faelexna/CSDesigner#readme"
+	"name": "collabspritedesigner",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "babel ./src -d ./lib",
+		"lint": "eslint ./src",
+		"test": "nyc mocha --require babel-core/register"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Faelexna/CSDesigner.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Faelexna/CSDesigner/issues"
+	},
+	"homepage": "https://github.com/Faelexna/CSDesigner#readme",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"eslint": "^7.18.0",
+		"mocha": "^8.2.1",
+		"nyc": "^15.1.0"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	},
+	"dependencies": {
+		"enable-travis": "^1.0.0",
+		"npm-travis": "^1.0.2",
+		"travis": "^0.1.1",
+		"travis-build-tools": "^1.2.39",
+		"travis-ci": "^2.2.0",
+		"travis-cli": "^1.0.9",
+		"travis-yaml": "^1.0.0"
+	}
 }
