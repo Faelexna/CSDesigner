@@ -7,11 +7,11 @@ let {
 	addUser,
 	getCurrentUser,
 	removeUser
-} = require('/model/users');
+} = require('./model/users');
 let {
 	getMessageHistory,
 	insertNewMessage
-} = require('/model/messages');
+} = require('./model/messages');
 
 //Configure mongodb connection
 let url = 'mongodb+srv://csduser:pass123@csdev.nsb90.mongodb.net/CSDev?retryWrites=true&w=majority';
@@ -38,7 +38,7 @@ io.on('connection', async function(socket) {
 		await addUser(socket.id, username);
 
 		//Notify chat
-		socket.broadcast.emit('appendMessage', ['chatbot', username+' has entered the chat']);
+		socket.emit('appendMessage', ['chatbot', username+' has entered the chat']);
 	});
 
 	socket.on('newMessage', function(message) {
@@ -46,7 +46,7 @@ io.on('connection', async function(socket) {
 		let user = getCurrentUser(socket.id);
 
 		insertNewMessage(user.username, message);
-		io.broadcast.emit('appendMessage', [user.username, message]);
+		io.emit('appendMessage', [user.username, message]);
 	});
 
 	socket.on('disconnect', function() {

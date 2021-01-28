@@ -2,36 +2,47 @@
 
 body {
 	background: #53c972;
-	margin: 50px
+	margin: 10px;
+	width: 80%;
+}
+
+* {
+	box-sizing: border-box;
+	width: 80%;
 }
 
 .btn {
-	padding: 15px 20px;
+	padding: 5px 5px;
 	background: aqua;
 	color: blueviolet;
 }
 
 .collection-chat-container {
-	width: 1500px;
-	height: 720px;
+	width: 80%;
+	height: 80%;
 	background: cornflowerblue;
-	margin: 50px;
+	margin: 10px 10px;
 	overflow: hidden;
-	align-self: flex-end;
+	width: 80%;
+	display: inline-block;
 }
 
+
 .collection-chat-main {
-	display: flex;
+	width: 80%;
+	display: inline-block;
 }
 
 .collection-messages {
-	padding: 20px 40px;
+	padding: 20px;
+	margin: auto;
 	height: 600px;
-	width: 500px;
+	width: 80%;
 	background: aliceblue;
-	align-self: flex-start;
+	overflow-y: scroll;
 }
 
 .collection-message-form {
-	align-self: flex-end;
+	margin:auto;
+	align-self: auto;
 }
