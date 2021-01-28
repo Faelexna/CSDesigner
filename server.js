@@ -3,6 +3,17 @@ const mongoose = require('mongoose');
 const path = require('path');
 const http = require('http');
 const socketIo = require('socket.io');
+const {
+	Users,
+	addUser,
+	getCurrentUser,
+	removeUser
+} = require('/model/users');
+const {
+	Messages,
+	getMessageHistory,
+	insertNewMessage
+} = require('/model/messages');
 
 //Configure mongodb connection
 const url = 'mongodb+srv://csduser:pass123@csdev.nsb90.mongodb.net/CSDev?retryWrites=true&w=majority';
