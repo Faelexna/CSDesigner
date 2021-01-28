@@ -29,7 +29,6 @@ async function removeUser(id) {
 
 //Export module
 module.exports = {
-	Users,
 	addUser,
 	getCurrentUser,
 	removeUser

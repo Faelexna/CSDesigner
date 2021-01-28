@@ -17,7 +17,6 @@ async function insertNewMessage( user, message ) {
 
 //Export module
 module.exports = {
-	Messages,
 	getMessageHistory,
 	insertNewMessage
 };
